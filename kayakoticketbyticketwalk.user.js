@@ -13,7 +13,7 @@ $(".ticketworkflowitem:contains('Close Ticket')").live('click', function(event){
 unsafeWindow.justClosed = 0;
 
 $('*').keydown(function(e){
-	if (89 == e.keyCode) {
+	if (78 == e.keyCode) { // n
 		var focusedElementId = $("*:focus").attr("id");
 
 		if (undefined == focusedElementId) {
