@@ -4,7 +4,9 @@
 // @include        http://*.kayako.com/staff/*
 // ==/UserScript==
 
-if (typeof($)==="undefined") $=unsafeWindow.$;
+if (typeof($)==="undefined") {
+	jQuery=$=unsafeWindow.$;	
+}
 
 $(".ticketworkflowitem:contains('Close Ticket')").live('click', function(event){
 	unsafeWindow.justClosed = 1;
@@ -51,5 +53,7 @@ unsafeWindow.loadViewportData = function(_url, _argumentIndexCounter, _prefixBas
 		} else {
 			$("#cpmenu").css('visibility', 'visible');
 		}
+		var targetOffset = $('.ticketgeneralcontainer').offset().top;
+		$('html,body').scrollTop(targetOffset);
 	});
 };
