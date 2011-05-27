@@ -54,6 +54,6 @@ unsafeWindow.loadViewportData = function(_url, _argumentIndexCounter, _prefixBas
 			$("#cpmenu").css('visibility', 'visible');
 		}
 		var targetOffset = $('.ticketgeneralcontainer').offset().top;
-		$('html,body').scrollTop(targetOffset);
+		$('html,body').animate({scrollTop: targetOffset}, 1000);
 	});
 };
